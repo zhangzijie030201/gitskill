@@ -1,14 +1,12 @@
-//ç¬¬ä¸€æ¬¡æäº¤ä»£ç 
-
 package schoolsystem;
  
 import java.util.ArrayList;
 import java.util.Scanner;
  
 public class SchoolSystem {
-    int[] maxStudent;    //æ¯ä¸ªç­çš„æœ€å¤§äººæ•°
-    int[] currentStudent;  //æ¯ä¸ªç­çš„å½“å‰äººæ•°
-    ArrayList<Boolean> result;  //å­˜å‚¨ç»“æœ
+    int[] maxStudent;    //Ã¿¸ö°àµÄ×î´óÈËÊı
+    int[] currentStudent;  //Ã¿¸ö°àµÄµ±Ç°ÈËÊı
+    ArrayList<Boolean> result;  //´æ´¢½á¹û
  
     public SchoolSystem(int big, int medium, int small) {
         maxStudent = new int[3];
@@ -19,12 +17,12 @@ public class SchoolSystem {
         result = new ArrayList<>();
     }
  
-    public static ArrayList<Integer> parse() { //æŒ‰æ ¼å¼è¾“å…¥å­—ç¬¦ä¸²ï¼Œåˆ†æå­—ç¬¦ä¸²ï¼Œè·å¾—ç›¸å…³å‚æ•°å­˜å‚¨åˆ°åˆ—è¡¨ä¸­å¹¶è¿”å›
+    public static ArrayList<Integer> parse() { //°´¸ñÊ½ÊäÈë×Ö·û´®£¬·ÖÎö×Ö·û´®£¬»ñµÃÏà¹Ø²ÎÊı´æ´¢µ½ÁĞ±íÖĞ²¢·µ»Ø
         String input;
         ArrayList<Integer> list = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("è¯·è¾“å…¥æ•°å­—ä»¥ç©ºæ ¼éš”å¼€ (å…¶ä¸­å‰ä¸‰ä¸ªæ•°ä»£è¡¨ å¤§ ä¸­ å°ç­çš„æœ€å¤§äººæ•°)ï¼š");
-        System.out.println("(å…¶ä¸­åä¸‰ä¸ªæ•°ä¸ºè¦æ·»åŠ çš„ å¤§(1) ä¸­(2) å°(3)ç­çš„äººæ•°)ï¼š");
+        System.out.println("ÇëÊäÈëÊı×ÖÒÔ¿Õ¸ñ¸ô¿ª (ÆäÖĞÇ°Èı¸öÊı´ú±í ´ó ÖĞ Ğ¡°àµÄ×î´óÈËÊı)£º");
+        System.out.println("(ÆäÖĞºóÈı¸öÊıÎªÒªÌí¼ÓµÄ ´ó(1) ÖĞ(2) Ğ¡(3)°àµÄÈËÊı)£º");
         input = scanner.nextLine();
         String[] value = input.split(" ");
         for (String s : value) {
@@ -59,4 +57,4 @@ public class SchoolSystem {
     public void print() {
         System.out.println(result);
     }
-}//ä¿®æ”¹
+}
